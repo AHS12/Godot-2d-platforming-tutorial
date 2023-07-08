@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://23740drpmrka"]
+[gd_scene load_steps=3 format=3 uid="uid://23740drpmrka"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_hh8f5"]
+[ext_resource type="PackedScene" uid="uid://ct68iso3fqk31" path="res://bg.tscn" id="2_jkw5m"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(270, 168)
@@ -20,6 +21,8 @@ offset_right = 422.0
 offset_bottom = 208.0
 tooltip_text = "this is the quit button, It will quit the game."
 text = "Quit"
+
+[node name="BG" parent="." instance=ExtResource("2_jkw5m")]
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

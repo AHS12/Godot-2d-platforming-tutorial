@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct68iso3fqk31"]
+
+[ext_resource type="Script" path="res://bg.gd" id="1_0rahj"]
+[ext_resource type="Texture2D" uid="uid://dtnesbc28mb21" path="res://sunny-land/assets/environment/back.png" id="1_7k1gg"]
+[ext_resource type="Texture2D" uid="uid://u3fqaceweehe" path="res://sunny-land/assets/environment/middle.png" id="2_nv4ut"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_0rahj")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Back" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(576, 352)
+scale = Vector2(3, 2.8)
+texture = ExtResource("1_7k1gg")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1232, 0)
+
+[node name="Middle" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(88, 496)
+texture = ExtResource("2_nv4ut")
+metadata/_edit_lock_ = true
+
+[node name="Middle2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(264, 496)
+texture = ExtResource("2_nv4ut")
+metadata/_edit_lock_ = true
+
+[node name="Middle3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(432, 520)
+texture = ExtResource("2_nv4ut")
+metadata/_edit_lock_ = true
+
+[node name="Middle4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(608, 520)
+texture = ExtResource("2_nv4ut")
+metadata/_edit_lock_ = true
+
+[node name="Middle5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(784, 504)
+texture = ExtResource("2_nv4ut")
+metadata/_edit_lock_ = true
+
+[node name="Middle6" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(960, 512)
+texture = ExtResource("2_nv4ut")
+metadata/_edit_lock_ = true
+
+[node name="Middle7" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1104, 504)
+texture = ExtResource("2_nv4ut")
+metadata/_edit_lock_ = true
+
+[node name="Middle8" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1200, 544)
+texture = ExtResource("2_nv4ut")
+metadata/_edit_lock_ = true
