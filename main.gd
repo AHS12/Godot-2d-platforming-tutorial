@@ -9,8 +9,6 @@ extends Node2D
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 
-
-
 func _on_quit_button_pressed():
 	get_tree().quit()
 
