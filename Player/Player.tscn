@@ -16,7 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://dmisy330drl0n" path="res://Sunny-land-assets-files/PNG/sprites/player/run/player-run-6.png" id="14_2sung"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_muewu"]
-height = 36.0
+radius = 9.0
+height = 32.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ci5u"]
 atlas = ExtResource("2_7ab6p")
@@ -241,7 +242,7 @@ position = Vector2(1, -16)
 shape = SubResource("CapsuleShape2D_muewu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(2, -16)
+position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_hxpqi")
 animation = &"Jump"
 
