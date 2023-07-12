@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var SPEED = 100
+var DAMAGE = 5
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player
@@ -44,4 +45,10 @@ func _on_player_death_body_entered(body):
 		get_node("AnimatedSprite2D").play("Death")
 		await get_node("AnimatedSprite2D").animation_finished
 		self.queue_free()
+		
+
+
+func _on_player_collison_body_entered(body):
+	if body.name == "Player":
+		body.HP -= DAMAGE
 		
