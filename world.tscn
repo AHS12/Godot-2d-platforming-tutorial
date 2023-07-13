@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b7ueesoe5outj"]
+[gd_scene load_steps=11 format=3 uid="uid://b7ueesoe5outj"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_2c6dq"]
 [ext_resource type="Texture2D" uid="uid://uf3buq7cce2h" path="res://sunny-land/assets/environment/tileset.png" id="2_1xqmh"]
@@ -409,6 +409,20 @@ texture = ExtResource("2_1xqmh")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2b4sr")
 
+[sub_resource type="GDScript" id="GDScript_ly86l"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	text = \"GOLD: \"+ str(Game.gold)
+"
+
 [node name="World" type="Node2D"]
 position = Vector2(455, 256)
 script = ExtResource("1_2c6dq")
@@ -465,3 +479,18 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "HP"
 script = ExtResource("7_g8obv")
+
+[node name="GOLD" type="Label" parent="UI"]
+anchors_preset = -1
+anchor_left = 0.042
+anchor_top = 0.123
+anchor_right = 0.16
+anchor_bottom = 0.173
+offset_left = -0.383999
+offset_top = 0.295998
+offset_right = -8.32001
+offset_bottom = 7.896
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "GOLD"
+script = SubResource("GDScript_ly86l")

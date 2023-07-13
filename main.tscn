@@ -7,12 +7,19 @@
 position = Vector2(270, 168)
 script = ExtResource("1_hh8f5")
 
+[node name="ContinueButton" type="Button" parent="."]
+offset_left = 160.0
+offset_top = 41.0
+offset_right = 421.0
+offset_bottom = 76.0
+text = "Continue"
+
 [node name="PlayButton" type="Button" parent="."]
-offset_left = 163.0
-offset_top = 104.0
-offset_right = 424.0
-offset_bottom = 139.0
-text = "PLAY"
+offset_left = 160.0
+offset_top = 108.0
+offset_right = 421.0
+offset_bottom = 143.0
+text = "New Game"
 
 [node name="QuitButton" type="Button" parent="."]
 offset_left = 161.0
@@ -24,5 +31,6 @@ text = "Quit"
 
 [node name="BG" parent="." instance=ExtResource("2_jkw5m")]
 
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
