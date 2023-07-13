@@ -32,5 +32,13 @@ func newGame():
 	
 func checkSaveGameExists():
 	var file = FileAccess.open(SAVE_PATH,FileAccess.READ)
-	return FileAccess.file_exists(SAVE_PATH) == true
+	if FileAccess.file_exists(SAVE_PATH) == true:
+		if not file.eof_reached():
+			var currentLine = JSON.parse_string(file.get_line())
+			if currentLine && currentLine["playerHP"] && currentLine["playerHP"] <= 0:
+				return false
+			else:
+				return true	
+		
+	return false
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b7ueesoe5outj"]
+[gd_scene load_steps=12 format=3 uid="uid://b7ueesoe5outj"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_2c6dq"]
 [ext_resource type="Texture2D" uid="uid://uf3buq7cce2h" path="res://sunny-land/assets/environment/tileset.png" id="2_1xqmh"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dtnesbc28mb21" path="res://sunny-land/assets/environment/back.png" id="3_2ojvu"]
 [ext_resource type="PackedScene" uid="uid://c24fnuyh8ed2c" path="res://Enemy/frog.tscn" id="6_s1kk8"]
 [ext_resource type="Script" path="res://HP.gd" id="7_g8obv"]
+[ext_resource type="PackedScene" uid="uid://dofk4get3so7c" path="res://Collectibles/cherry.tscn" id="7_mpuv5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2b4sr"]
 texture = ExtResource("2_1xqmh")
@@ -462,6 +463,24 @@ position = Vector2(609, 120)
 
 [node name="Frog4" parent="Mobs" instance=ExtResource("6_s1kk8")]
 position = Vector2(-199, 96)
+
+[node name="Frog5" parent="Mobs" instance=ExtResource("6_s1kk8")]
+position = Vector2(449, 128)
+
+[node name="Collectibles" type="Node2D" parent="."]
+position = Vector2(17, 136)
+
+[node name="Cherry" parent="Collectibles" instance=ExtResource("7_mpuv5")]
+position = Vector2(-8, 8)
+
+[node name="Cherry2" parent="Collectibles" instance=ExtResource("7_mpuv5")]
+position = Vector2(152, 0)
+
+[node name="Cherry3" parent="Collectibles" instance=ExtResource("7_mpuv5")]
+position = Vector2(360, 0)
+
+[node name="Cherry4" parent="Collectibles" instance=ExtResource("7_mpuv5")]
+position = Vector2(-368, 0)
 
 [node name="UI" type="CanvasLayer" parent="."]
 

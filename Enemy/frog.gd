@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-var SPEED = 100
-var DAMAGE = 5
-var GOLD = 5
+const SPEED = 100
+const DAMAGE = 5
+const GOLD = 5
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player
