@@ -42,14 +42,18 @@ horizontal_alignment = 1
 
 [node name="Resume Game" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_bottom = NodePath("../SaveButton")
 text = "Resume Game"
 
 [node name="SaveButton" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../Resume Game")
+focus_neighbor_bottom = NodePath("../QuitDesktop")
 text = "Save Game"
 
 [node name="QuitDesktop" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../SaveButton")
 text = "Exit to Desktop"
 
 [connection signal="pressed" from="Panel/VBoxContainer/Resume Game" to="." method="_on_resume_game_pressed"]

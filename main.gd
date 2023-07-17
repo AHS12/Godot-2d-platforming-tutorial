@@ -3,9 +3,6 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#Utils.saveGame()
-	#Utils.loadGame()
-	#print(Utils.checkSaveGameExists())
 	if Utils.checkSaveGameExists() == false:
 		get_node("ContinueButton").disabled = true
 

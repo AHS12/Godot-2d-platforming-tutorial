@@ -6,11 +6,13 @@ extends Control
 func _ready():
 	hide()
 	world_manager.connect("toggle_game_paused", _on_world_manager_toggle_game_paused)
+	get_node("Panel/VBoxContainer/Resume Game").grab_focus()
 
 
 func _on_world_manager_toggle_game_paused(is_paused):
 	if is_paused:
 		show()
+		get_node("Panel/VBoxContainer/Resume Game").grab_focus()
 	else:
 		hide()
 
